@@ -12,7 +12,7 @@ import { HomeIcon } from "@heroicons/react/solid";
 
 function Header() {
   return (
-    <div>
+    <div className="shadow-sm border-b bg-white">
       <div className="flex justify-between bg-white max-w-6xl mx-5 lg:mx-auto">
         {" "}
         {/* using Tailwind to style */}
@@ -47,8 +47,22 @@ function Header() {
         <h1>Hello World</h1>
         {/* Right */}
         <div className="flex items-center justify-end space-x-4">
-          <HomeIcon className="h-10 w-10"></HomeIcon>
+          <HomeIcon className="navBtn"></HomeIcon>
+          <div className="relative navBtn">
+            <PaperAirplaneIcon className="navBtn rotate-45"></PaperAirplaneIcon>
+            <div className="absolute -top-2 -right-2 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white">
+              3
+            </div>
+          </div>
           <MenuIcon className="h-6 md:hidden cursor-pointer"></MenuIcon>
+          <PlusCircleIcon className="navBtn"></PlusCircleIcon>
+          <UserGroupIcon className="navBtn"></UserGroupIcon>
+          <HeartIcon className="navBtn"></HeartIcon>
+          <img
+            src="https://links.papareact.com/3ke"
+            alt="profile pic"
+            className="h-10 rounded-full cursor-pointer"
+          />
         </div>
       </div>
     </div>
