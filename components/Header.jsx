@@ -8,10 +8,12 @@ import {
   MenuIcon,
 } from "@heroicons/react/outline";
 
+import { HomeIcon } from "@heroicons/react/solid";
+
 function Header() {
   return (
     <div>
-      <div className="flex justify-between bg-white max-w-6xl">
+      <div className="flex justify-between bg-white max-w-6xl mx-5 lg:mx-auto">
         {" "}
         {/* using Tailwind to style */}
         {/* Left */}
@@ -44,6 +46,10 @@ function Header() {
         </div>
         <h1>Hello World</h1>
         {/* Right */}
+        <div className="flex items-center justify-end space-x-4">
+          <HomeIcon className="h-10 w-10"></HomeIcon>
+          <MenuIcon className="h-6 md:hidden cursor-pointer"></MenuIcon>
+        </div>
       </div>
     </div>
   );
