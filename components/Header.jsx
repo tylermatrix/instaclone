@@ -1,4 +1,12 @@
 import Image from "next/image";
+import {
+  SearchIcon,
+  PlusCircleIcon,
+  UserGroupIcon,
+  HeartIcon,
+  PaperAirplaneIcon,
+  MenuIcon,
+} from "@heroicons/react/outline";
 
 function Header() {
   return (
@@ -7,14 +15,14 @@ function Header() {
         {" "}
         {/* using Tailwind to style */}
         {/* Left */}
-        <div className="relative hidden lg:inline-grid w-24 h-24 cursor-pointer">
+        <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
           <Image
             src="https://links.papareact.com/ocw"
             layout="fill"
             objectFit=""
           ></Image>
         </div>
-        <div className="relative w-10 h-10 lg:hidden flex-shrink-0 cursor-pointer">
+        <div className="relative w-10 lg:hidden flex-shrink-0 cursor-pointer">
           <Image
             src="https://links.papareact.com/jjm"
             layout="fill"
@@ -22,6 +30,18 @@ function Header() {
           ></Image>
         </div>
         {/* Middle */}
+        <div className="max-w-xs">
+          <div className="mt-1 relative p-3 rounded-md  ">
+            <div className="absolute inset-y-0 pl-3 flex items-center pointer-events-none">
+              <SearchIcon className="h-5 w-5 text-grey-400" />
+            </div>
+            <input
+              className="bg-grey-50 block w-full pl-10 sm:text-sm border-grey-300 rounded-md focus:ring-black focus:border-black"
+              type="text"
+              placeholder="Search"
+            />
+          </div>
+        </div>
         <h1>Hello World</h1>
         {/* Right */}
       </div>
