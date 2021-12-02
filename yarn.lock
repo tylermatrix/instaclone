@@ -190,6 +190,16 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@svg-icons/heroicons-outline@^1.85.0":
+  version "1.85.0"
+  resolved "https://registry.yarnpkg.com/@svg-icons/heroicons-outline/-/heroicons-outline-1.85.0.tgz#aa292ac2f442b746c8b26ce7c3ef6232d8343537"
+  integrity sha512-x5RrghM0lkyjjiWrODydEslwPexVX0wUe+a00o9kvPZ0x9yi1COV17ae3S8u906rBIzctZtI7pI+FwMQBH9hZw==
+
+"@svg-icons/heroicons-solid@^1.85.0":
+  version "1.85.0"
+  resolved "https://registry.yarnpkg.com/@svg-icons/heroicons-solid/-/heroicons-solid-1.85.0.tgz#5c50d029824394be7a47dd33d5bb367f92096e32"
+  integrity sha512-Emf5na7HVTGEaRr4UMVl6ObGFUgjqn3+Tm9Pt5WdPSiXOmV5qtO8g3xxf0pN1+oOA7kJt/9FN6p2NG+yCgjQEg==
+
 "@types/node@*":
   version "16.11.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.6.tgz#6bef7a2a0ad684cf6e90fcfe31cecabd9ce0a3ae"
@@ -1076,6 +1086,16 @@ he@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+heroicons-react@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/heroicons-react/-/heroicons-react-1.4.1.tgz#52f88a7a178b3ebaaa488da87ead631c13d99846"
+  integrity sha512-lFB8N44eeju73p5IjaeRrRejXsWWjsmeLK1LQrXGI5UnV9qvkzk2VZoMx5HKLnp1xJI4i9pFh/g2uRc7M1jrjQ==
+
+heroicons@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/heroicons/-/heroicons-1.0.5.tgz#75c8bc02ecd707d93dc86f4a058569ee24ecfe6c"
+  integrity sha512-QMidnnCbBSmnuN0ieh6lDvAmIFeUoPyPv0z1/3Q2gM8c69aIcoolMCg9i0MZXwnNE//jWU1sxEFY4T2o1fYgeg==
 
 hex-color-regex@^1.1.0:
   version "1.1.0"
