@@ -43,7 +43,6 @@ const Header = () => {
             />
           </div>
         </div>
-        <h1>Hello World</h1>
         {/* Right */}
         <div className="flex items-center justify-end space-x-4">
           <HomeIcon className="navBtn"></HomeIcon>
