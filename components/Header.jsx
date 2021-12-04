@@ -21,7 +21,7 @@ const Header = () => {
         {/* Left */}
         <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
           <Image
-            src="https://links.papareact.com/jjm"
+            src="https://links.papareact.com/ocw"
             layout="fill"
             objectFit=""
           ></Image>
