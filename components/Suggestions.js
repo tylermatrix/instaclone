@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import faker from "faker";
 
 function Suggestions() {
@@ -34,7 +34,7 @@ function Suggestions() {
               Works at {profile.company.name}
             </h3>
           </div>
-          <button className="text-blue-400 text-xs font-bold"></button>
+          <button className="text-blue-400 text-xs font-bold">Follow</button>
         </div>
       ))}
     </div>
