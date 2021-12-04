@@ -9,7 +9,10 @@ import {
 } from "@heroicons/react/outline";
 
 import { HomeIcon } from "@heroicons/react/solid";
+import { signIn, useSession, signOut } from "next-auth/react";
+
 const Header = () => {
+  const { data: session } = useSession();
   return (
     <div className="shadow-sm border-b bg-white">
       <div className="flex justify-between bg-white max-w-6xl mx-5 lg:mx-auto">
@@ -18,7 +21,7 @@ const Header = () => {
         {/* Left */}
         <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
           <Image
-            src="https://links.papareact.com/ocw"
+            src="https://links.papareact.com/jjm"
             layout="fill"
             objectFit=""
           ></Image>
@@ -46,21 +49,28 @@ const Header = () => {
         {/* Right */}
         <div className="flex items-center justify-end space-x-4">
           <HomeIcon className="navBtn"></HomeIcon>
-          <div className="relative navBtn">
-            <PaperAirplaneIcon className="navBtn rotate-45"></PaperAirplaneIcon>
-            <div className="absolute -top-2 -right-2 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white">
-              3
-            </div>
-          </div>
           <MenuIcon className="h-6 md:hidden cursor-pointer"></MenuIcon>
-          <PlusCircleIcon className="navBtn"></PlusCircleIcon>
-          <UserGroupIcon className="navBtn"></UserGroupIcon>
-          <HeartIcon className="navBtn"></HeartIcon>
-          <img
-            src="https://links.papareact.com/3ke"
-            alt="profile pic"
-            className="h-10 rounded-full cursor-pointer"
-          />
+          {session ? (
+            <>
+              <div className="relative navBtn">
+                <PaperAirplaneIcon className="navBtn rotate-45"></PaperAirplaneIcon>
+                <div className="absolute -top-2 -right-2 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white">
+                  3
+                </div>
+              </div>
+              <PlusCircleIcon className="navBtn"></PlusCircleIcon>
+              <UserGroupIcon className="navBtn"></UserGroupIcon>
+              <HeartIcon className="navBtn"></HeartIcon>
+              <img
+                onClick={signOut}
+                src={session?.user?.image}
+                alt="profile pic"
+                className="h-10 w-10 rounded-full cursor-pointer"
+              />
+            </>
+          ) : (
+            <button onClick={signIn}>Sign in </button>
+          )}
         </div>
       </div>
     </div>
