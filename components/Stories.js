@@ -1,4 +1,4 @@
-import faker from "faker";
+import faker, { helpers } from "faker";
 import React, { useEffect, useState } from "react";
 import Story from "./Story";
 import { useSession } from "next-auth/react";

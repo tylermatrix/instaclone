@@ -4,8 +4,9 @@ import GoogleProvider from "next-auth/providers/google";
 export default NextAuth({
   providers: [
     GoogleProvider({
-      clientId: process.env.GITHUB_CLIENT_ID,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+      clientId:
+        "294225086771-5pgc2mo6t9ulb26rg7tkolvagtk123vq.apps.googleusercontent.com",
+      clientSecret: "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",
     }),
   ],
   pages: {

@@ -10,23 +10,34 @@ import {
 
 import { HomeIcon } from "@heroicons/react/solid";
 import { signIn, useSession, signOut } from "next-auth/react";
+import { useRouter } from "next/router";
+import { useRecoilState } from "recoil";
+import { modalState } from "../atoms/modalAtom";
 
 const Header = () => {
   const { data: session } = useSession();
+  const [open, setOpen] = useRecoilState(modalState);
+  const router = useRouter();
   return (
     <div className="shadow-sm border-b bg-white">
       <div className="flex justify-between bg-white max-w-6xl mx-5 lg:mx-auto">
         {" "}
         {/* using Tailwind to style */}
         {/* Left */}
-        <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
+        <div
+          onClick={() => router.push("/")}
+          className="relative hidden lg:inline-grid w-24 cursor-pointer"
+        >
           <Image
             src="https://links.papareact.com/ocw"
             layout="fill"
             objectFit=""
           ></Image>
         </div>
-        <div className="relative w-10 lg:hidden flex-shrink-0 cursor-pointer">
+        <div
+          onClick={() => router.push("/")}
+          className="relative w-10 lg:hidden flex-shrink-0 cursor-pointer"
+        >
           <Image
             src="https://links.papareact.com/jjm"
             layout="fill"
@@ -48,7 +59,10 @@ const Header = () => {
         </div>
         {/* Right */}
         <div className="flex items-center justify-end space-x-4">
-          <HomeIcon className="navBtn"></HomeIcon>
+          <HomeIcon
+            onClick={() => router.push("/")}
+            className="navBtn"
+          ></HomeIcon>
           <MenuIcon className="h-6 md:hidden cursor-pointer"></MenuIcon>
           {session ? (
             <>
@@ -58,7 +72,10 @@ const Header = () => {
                   3
                 </div>
               </div>
-              <PlusCircleIcon className="navBtn"></PlusCircleIcon>
+              <PlusCircleIcon
+                onClick={() => setOpen(true)}
+                className="navBtn"
+              ></PlusCircleIcon>
               <UserGroupIcon className="navBtn"></UserGroupIcon>
               <HeartIcon className="navBtn"></HeartIcon>
               <img
